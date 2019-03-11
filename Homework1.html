@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Basic Syntax Highlighter  </title>
+  <style>
+  /* pre { border: solid 1px } */
+    #pat { width: 90px; }
+    #inp { width: 300px; }
+    .found { color: #0000FF; }
+	.foundArray{ color: #FF0000; }
+	body{
+	background-color: #F0FFFF;
+	
+	}
+	p{
+		border-style: groove; border-width: 1px;
+	}
+    .inp{
+
+       border: 20px solid DeepSkyBlue;
+
+       border-radius: 4px;
+     }
+	
+  </style>
+</head>
+
+<body>
+<h2 id=title></h2>
+
+
+<p>
+<h4> Input Area : </h4>
+<textarea id=inp rows="10" cols="50" class="inp">
+let longString = "This is a very long string which needs " +
+"to wrap across multiple lines because " 
+"otherwise my code is unreadable.";
+var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+var fruits = ["Apple", "Banana", "Orange"];
+var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+</textarea> </p>
+<p id=out></p>
+<p id=out2></p>
+
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+
+
+<script>
+"use strict";
+const ptrn = ["[a-zA-Z0-9]"];
+function checkRE() {
+	let lines =[];
+	let metin = inp.value;
+	console.log(metin);
+	lines = metin.split("\n");
+	console.log(lines)
+	
+    if (ptrn[0] && inp.value) {
+        out2.innerHTML  = "Arrays: ";
+		out.innerHTML = "String: ";
+		const exp = new RegExp(ptrn[0],'g');
+		const str = "<span class=found>$&</span>";
+		for(let a of lines){
+			if(a.includes("[") && a.includes("]")){
+			let ilkIndex = a.indexOf("[");
+			let sonIndex = a.indexOf("]");
+			const str2 = "<span class=foundArray>$&</span>";
+			let arrayStr = a.slice(ilkIndex,(sonIndex+1));
+			out2.innerHTML += arrayStr.replace(exp, str2);}
+			else{
+			const str = "<span class=found>$&</span>";
+			out.innerHTML += a.replace(exp, str);
+			}
+		} 
+    }
+}
+    sample.innerText = checkRE.toString();
+    title.innerText = document.title; 
+	checkRE();
+</script>
+
+</body>
+</html>
