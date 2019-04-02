@@ -7,6 +7,8 @@ Classworks
 
 . [CW3](https://busenurkaraca.github.io/AutomataWorks/CW3_Automata.html)
 
+. [CW5](https://busenurkaraca.github.io/AutomataWorks/Expression.html)
+
 Homeworks
 
 . [HW1](https://busenurkaraca.github.io/AutomataWorks/Homework1.html)
