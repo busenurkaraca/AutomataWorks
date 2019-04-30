@@ -16,3 +16,8 @@ Classworks
 Homeworks
 
 . [HW1](https://busenurkaraca.github.io/AutomataWorks/Homework1.html)
+
+Project
+
+. [Term Project](https://busenurkaraca.github.io/AutomataWorks/TermProject.html)
+
