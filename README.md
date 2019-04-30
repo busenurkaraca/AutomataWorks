@@ -3,9 +3,9 @@ Formal Languages and Automata Theory lesson works.
 
 Classworks
 
-. [CW2](https://busenurkaraca.github.io/AutomataWorks/CW2.html)
+. [CW2 NFA and DFA](https://busenurkaraca.github.io/AutomataWorks/CW2.html)
 
-. [CW3](https://busenurkaraca.github.io/AutomataWorks/CW3_Automata.html)
+. [CW3 Regular Expressions](https://busenurkaraca.github.io/AutomataWorks/CW3_Automata.html)
 
 . [CW5](https://busenurkaraca.github.io/AutomataWorks/Expression.html)
 
@@ -19,5 +19,5 @@ Homeworks
 
 Project
 
-. [Term Project](https://busenurkaraca.github.io/AutomataWorks/TermProject.html)
+. [Term Project : Regular Expression Learning Page](https://busenurkaraca.github.io/AutomataWorks/TermProject.html)
 
