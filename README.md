@@ -17,6 +17,8 @@ Homeworks
 
 . [HW1 : Basic Syntax Highlighter](https://busenurkaraca.github.io/AutomataWorks/Homework1.html)
 
+. [HW2 : Expression Parser (with new properties)](https://busenurkaraca.github.io/AutomataWorks/ExpressionHW2.html)
+
 Project
 
 . [Term Project : Regular Expression Learning Page](https://busenurkaraca.github.io/AutomataWorks/TermProject.html)
