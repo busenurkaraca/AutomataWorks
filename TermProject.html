@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions </title>
+  <style>
+   html{
+   		background-image: url("background2.png");
+        min-width: 600px;
+        max-width: 600px;
+        min-height: 600px;
+        max-height: 1000px;
+        margin:0 auto;
+    }
+    body{
+        margin:0 auto;
+		background-color: white;
+    }
+  /* pre { border: solid 1px } */
+    #pat { width: 270px; }
+    #inp { width: 290px; }
+    .found { color: #F60; }
+	body {
+
+		background-color: #c5ccd3;
+		
+	}
+	p{
+	
+		border-width: 1px;
+	}
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right {
+    float: right;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+    table { border-collapse: collapse;}
+    th { color: white; padding: 15px 15px; border: 4px double #C0C0C0; background:black;}
+    td { 
+        color: black;
+        border: 2px dashed blue; 
+        padding: 5px 50px; 
+        text-align: start;
+    }
+
+  </style>
+</head>
+
+<body>
+<div id="mainDiv">
+
+
+<div class="navbar">
+  <a href="#i1">Regex Try</a>
+  <a href="#i2">What is Regex?</a>
+  <a href="#i3">History of Regex</a>
+  <a href="#i4">Regex Patterns Table<a>
+  <!--<a href="#i2">Pattern Rules</a>
+  <a href="#i3">Regex in Linux</a>
+  <a href="#i4">Advantages</a> -->
+</div>
+<h2 align="center" id=title></h2>
+
+<a name="i1">
+<p>
+Enter your pattern here : <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+</p>
+
+<p>
+Enter your text here : <input type=text id=inp onKeyUp="checkRE()">
+</p>
+
+<p>
+Choose your color here : <input id=renkler type="color" class=color value="#000080">
+<p id=out>
+</p>
+</a>
+
+
+<b></b>
+
+
+<a name="i2">
+ <h4>What is Regex ?</h4> 
+A regular expression is a special text string for describing a search pattern. 
+You are probably familiar with wildcard notations such as *.txt to find all text files in a file manager.
+A regular expression, regex or regexp (sometimes called a rational expression) is a sequence of characters that define a search pattern. 
+Usually this pattern is used by string searching algorithms for "find" or "find and replace" operations on strings, or for input validation. 
+It is a technique developed in theoretical computer science and formal language theory.
+</a>
+
+
+<a name="i3">
+<h4>History of Regex </h4>
+Regular expressions originated in 1951, when mathematician Stephen Cole Kleene described regular languages using his mathematical notation called regular sets. These arose in theoretical computer science, in the subfields of automata theory (models of computation) and the description and classification of formal languages. 
+Other early implementations of pattern matching include the SNOBOL language, which did not use regular expressions, but instead its own pattern matching constructs.
+Regular expressions entered popular use from 1968 in two uses: pattern matching in a text editor and lexical analysis in a compiler. Among the first appearances of regular expressions in program form was when Ken Thompson built Kleene's notation into the editor QED as a means to match patterns in text files. 
+For speed, Thompson implemented regular expression matching by just-in-time compilation (JIT) to IBM 7094 code on the Compatible Time-Sharing System, an important early example of JIT compilation. He later added this capability to the Unix editor ed, which eventually led to the popular search tool grep's use 
+of regular expressions ("grep" is a word derived from the command for regular expression searching in the ed editor: g/re/p meaning "Global search for Regular Expression and Print matching lines"). 
+Around the same time when Thompson developed QED, a group of researchers including Douglas T. Ross implemented a tool based on regular expressions that is used for lexical analysis in compiler design.
+</a>
+
+<a name="i4">
+<h4>Regex Patterns </h4>
+<table id="tablo">
+<tbody>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>Find any character between the brackets</td>
+</tr>
+
+<tr>
+<td>[^abc]</td>
+<td>Find any character NOT between the brackets</td>
+</tr>
+
+<tr>
+<td>[0-9]</td>
+<td>Find any character between the brackets (any digit)</td>
+</tr>
+
+<tr>
+<td>[^0-9]</td>
+<td>Find any character NOT between the brackets (any non-digit)</td>
+</tr>
+
+<tr>
+<td>[0-9]{a}</td>
+<td>Find the a-digit character sequence</td>
+</tr>
+
+<tr>
+<td>.</td>
+<td>Find a single character, except newline or line terminator</td>
+</tr>
+
+<tr>
+<td>\w</td>
+<td>Find a word character</td>
+</tr>
+
+<tr>
+<td>\W/td>
+<td>Find a non-word character</td>
+</tr>
+
+<tr>
+<td>\d</td>
+<td>Find a digit</td>
+</tr>
+
+<tr>
+<td>\D</td>
+<td>Find a non-digit character</td>
+</tr>
+
+<tr>
+<td>\s</td>
+<td>Find a whitespace character</td>
+</tr>
+
+<tr>
+<td>\b</td>
+<td>Find a match at the beginning/end of a word</td>
+</tr>
+
+<tr>
+<td>\0</td>
+<td>Find a NUL character</td>
+</tr>
+
+<tr>
+<td>\n</td>
+<td>Find a new line character</td>
+</tr>
+
+<tr>
+<td>\f</td>
+<td>Find a form feed character</td>
+</tr>
+
+<tr>
+<td>\t</td>
+<td>Find a tab character</td>
+</tr>
+
+<tr>
+<td>n+</td>
+<td>Matches any string that contains at least one n</td>
+</tr>
+
+<tr>
+<td>n*</td>
+<td>Matches any string that contains zero or more occurrences of n</td>
+</tr>
+
+<tr>
+<td>n?</td>
+<td>Matches any string that contains zero or one occurrences of n</td>
+</tr>
+
+<tr>
+<td>n{X}</td>
+<td>Matches any string that contains a sequence of X n's</td>
+</tr>
+
+<tr>
+<td>n{X,Y}</td>
+<td>Matches any string that contains a sequence of X to Y n's</td>
+</tr>
+
+<tr>
+<td>n{X,}</td>
+<td>Matches any string that contains a sequence of at least X n's</td>
+</tr>
+
+<tr>
+<td>n$</td>
+<td>Matches any string with n at the end of it</td>
+</tr>
+
+<tr>
+<td>^n</td>
+<td>Matches any string with n at the beginning of it</td>
+</tr>
+
+<tr>
+<td>?=n</td>
+<td>Matches any string that is followed by a specific string n</td>
+</tr>
+
+<tr>
+<td>?!n</td>
+<td>Matches any string that is not followed by a specific string n</td>
+</tr>
+</tbody>
+</table>
+</a>
+
+</div>
+
+
+<script>
+"use strict";
+const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","(\\w)\\1+","[A-Z]"];
+const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ",
+	 "Ziraat bankası affetti, kredi başvurularını reddetti.",
+	 "Necip Fazıl Kısakürek ünlü bir yazardır."];
+function setValues() {
+    pat.value ;
+    inp.value ;
+    checkRE();
+}
+function checkRE() {
+	out.innerHTML = "";
+    if (pat.value && inp.value) {
+        const exp = new RegExp(pat.value,'g');
+        var str = "<span class=color>$&</span>";
+		str = str.fontcolor(renkler.value);
+        out.innerHTML = inp.value.replace(exp, str);
+		//var kelime = "xcdfd"
+		//kelime = kelime.fontcolor(renkler.value);
+		//out.innerHTML += kelime;
+    }
+}
+	
+    //sample.innerText = setValues.toString()+"\n"+checkRE.toString();
+    title.innerText = document.title; setValues();
+</script>
+
+<p>My Github Repo : <a href="https://busenurkaraca.github.io/AutomataWorks/"> Formal Languages and Automata Theory</p>
+<p>For HTML and CSS : <a href="https://www.w3schools.com/"> W3 Schools</p>
+<p>General Subjects and Search : <a href="https://www.wikizero.com/"> Encyclopedia</p>
+</body>
+</html>
