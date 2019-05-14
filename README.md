@@ -21,5 +21,5 @@ Homeworks
 
 Project
 
-. [Term Project : Regular Expression Learning Page](https://busenurkaraca.github.io/AutomataWorks/TermProject.html)
+. [Term Project : Regular Expression Learning Page](https://busenurkaraca.github.io/AutomataWorks/Term Project/TermProject.html)
 
